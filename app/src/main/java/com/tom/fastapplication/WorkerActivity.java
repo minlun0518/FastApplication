@@ -11,8 +11,6 @@ public class WorkerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_worker);
-        //String username= getIntent().getStringExtra();
-        TableLayout tableLayout =findViewById(R.id.tablelayout);
-        //tableLayout.
+
     }
 }

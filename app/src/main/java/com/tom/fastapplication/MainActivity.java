@@ -24,12 +24,10 @@ public class MainActivity extends AppCompatActivity {
             //如果不是登入狀態就呼叫login intent
             Intent login = new Intent(this, LoginActivity.class);
             startActivityForResult(login, REQUEST_CODE_LOGIN);
-            //startActivityForResult(login,110);
         }
     }
 
     public void findViews() {
-        //Intent work = new Intent(this, WorkerActivity.class);
         findViewById(R.id.goWorkButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
