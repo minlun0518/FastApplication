@@ -3,6 +3,7 @@ package com.tom.fastapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.TableLayout;
 
 public class WorkerActivity extends AppCompatActivity {
 
@@ -11,5 +12,7 @@ public class WorkerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_worker);
         //String username= getIntent().getStringExtra();
+        TableLayout tableLayout =findViewById(R.id.tablelayout);
+        //tableLayout.
     }
 }

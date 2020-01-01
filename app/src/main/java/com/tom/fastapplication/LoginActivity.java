@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         if("rd7791".equals(username)&&"12345678".equals(password)){
 
             setResult(RESULT_OK);
-            //getIntent().putExtra(getString(),username);
+
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.rdteacher)
                     .setTitle("登入成功")
