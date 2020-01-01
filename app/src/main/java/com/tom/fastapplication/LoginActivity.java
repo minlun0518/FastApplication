@@ -24,9 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = edPassword.getText().toString();
 
         if("rd7791".equals(username)&&"12345678".equals(password)){
-
             setResult(RESULT_OK);
-
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.rdteacher)
                     .setTitle("登入成功")
@@ -34,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
                     .setPositiveButton("呵呵", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
                             finish();
                         }
                     })

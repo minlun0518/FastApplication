@@ -28,13 +28,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void findViews() {
-        findViewById(R.id.goWorkButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent work = new Intent(MainActivity.this,GameActivity.class);
-                startActivity(work);
-            }
-        });
 
         findViewById(R.id.goConsumerButton).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(post);
             }
         });
+
+        findViewById(R.id.goWorkButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent worker =new Intent(MainActivity.this,WorkActivity.class);
+                startActivity(worker);
+            }
+        });
+
+
 
     }
 

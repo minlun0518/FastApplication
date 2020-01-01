@@ -34,7 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="rd7791"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="104dp"
-        android:text="密碼"
+        android:text="不是祕密的密碼"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -57,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="52dp"
-        android:text="帳號"
+        android:text="使用者帳號"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -76,6 +75,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479"
-        app:srcCompat="@drawable/go" />
+        app:layout_constraintVertical_bias="0.557"
+        app:srcCompat="@drawable/ok" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
