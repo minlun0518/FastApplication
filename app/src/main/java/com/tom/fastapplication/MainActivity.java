@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,10 +22,27 @@ public class MainActivity extends AppCompatActivity {
         if (!logon) {
             //如果不是登入狀態就呼叫login intent
             Intent login = new Intent(this, LoginActivity.class);
-//            startActivity(login);
             //startActivityForResult(login, REQUEST_CODE_LOGIN);
             startActivityForResult(login,110);//
         }
+
+        ImageButton worker =findViewById(R.id.goWorkButton);
+        ImageButton consumer =findViewById(R.id.goConsumerButton);
+
+        worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                workButton();
+            }
+        });
+
+
+        consumer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                postButton();
+            }
+        });
     }
 
     @Override
@@ -42,7 +62,14 @@ public class MainActivity extends AppCompatActivity {
        // super.onActivityResult(requestCode, resultCode, data);
     }
 
+    public void workButton(){
+        Intent work = new Intent(this, WorkerActivity.class);
+        startActivity(work);
+    }
 
-
+    public void postButton(){
+        Intent post =new Intent(this,PostActivity.class);
+        startActivity(post);
+    }
 
 }
