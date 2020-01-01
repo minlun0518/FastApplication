@@ -19,13 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (!logon) {
-            //如果不是登入狀態就呼叫login intent
-            Intent login = new Intent(this, LoginActivity.class);
-            //startActivityForResult(login, REQUEST_CODE_LOGIN);
-            startActivityForResult(login,110);//
-        }
-
         ImageButton worker =findViewById(R.id.goWorkButton);
         ImageButton consumer =findViewById(R.id.goConsumerButton);
 
@@ -43,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 postButton();
             }
         });
+
+        if (!logon) {
+            //如果不是登入狀態就呼叫login intent
+            Intent login = new Intent(this, LoginActivity.class);
+            startActivityForResult(login, REQUEST_CODE_LOGIN);
+            //startActivityForResult(login,110);
+        }
     }
 
     @Override
@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         //resultCode:回來帶的結果
         if(requestCode == REQUEST_CODE_LOGIN){
             //判斷是不是正常回家，如果有好好的來回
-            if(requestCode != REQUEST_CODE_LOGIN){
-                Toast.makeText(MainActivity.this,"再見",Toast .LENGTH_LONG).show();
+            if(requestCode != RESULT_OK){
+                Toast.makeText(this,"再見",Toast.LENGTH_LONG).show();
                 finish();
             }else {
                 logon=true;

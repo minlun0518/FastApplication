@@ -7,15 +7,17 @@
     tools:context=".workerActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="99dp">
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monday" />
+            android:text="搶錢囉" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
