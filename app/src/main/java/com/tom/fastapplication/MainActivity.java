@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.goWorkButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent work = new Intent(MainActivity.this, WorkerActivity.class);
+                Intent work = new Intent(MainActivity.this,GameActivity.class);
                 startActivity(work);
             }
         });
