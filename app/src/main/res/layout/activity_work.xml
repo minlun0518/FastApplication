@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".WorkActivity">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/questionButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -17,20 +17,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goWorkButton" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/goWorkButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="160dp"
+        android:adjustViewBounds="false"
         android:background="#00000000"
+        android:cropToPadding="false"
         android:scaleType="fitCenter"
         android:src="@drawable/get"
+        android:textAlignment="34"
         android:tint="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/gameButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -43,7 +46,7 @@
         app:layout_constraintStart_toEndOf="@+id/goWorkButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/leaveButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -54,4 +57,20 @@
         android:src="@drawable/quickrun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gameButton" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/employee"
+        android:text="工作者專區"
+        android:textAlignment="viewStart"
+        android:textColor="#35B9CA"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
