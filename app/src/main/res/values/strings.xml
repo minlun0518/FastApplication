@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">FastApplication</string>
-    <string name="title_activity_post">PostActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">運送服務平台</string>
+    <string name="title_activity_post">運送專區</string>
+    <string name="tab_text_1">基本功能</string>
+    <string name="tab_text_2">我要送貨</string>
+    <string name="tab_text_3">追蹤貨品</string>
 </resources>
