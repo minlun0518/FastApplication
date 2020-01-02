@@ -4,29 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#74CFEFF3"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="(或放入紙鈔????)"
-        android:textAlignment="textStart"
-        android:textColor="#CBEB7676"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="請選擇服務項目"
+        android:text="請選擇身分"
         android:textAlignment="textStart"
         android:textColor="#CBEB7676"
         android:textSize="36sp"
@@ -34,32 +19,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:visibility="gone" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="cursive"
         android:text="運送服務平台"
         android:textAlignment="center"
         android:textColor="#1079F7"
-        android:textSize="60sp"
+        android:textSize="54sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="16dp"
         android:text="第二組 歡迎你"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.102"
@@ -70,44 +52,70 @@
         android:id="@+id/goConsumerButton"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:layout_marginBottom="56dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/goWorkButton"
+        app:layout_constraintTop_toTopOf="@+id/goWorkButton"
         app:srcCompat="@drawable/needhelp" />
 
     <ImageButton
         android:id="@+id/goWorkButton"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:layout_marginBottom="56dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toStartOf="@+id/goConsumerButton"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/woker" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="162dp"
-        android:layout_height="139dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="54sp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
         app:srcCompat="@drawable/header" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="412dp"
-        android:layout_height="72dp"
+        android:layout_width="411dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="620dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fjuba" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00E0F7FA"
+        android:drawableLeft="@drawable/arrowup"
+        android:text="找工作"
+        android:textAllCaps="false"
+        android:textColor="#708DD6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/goWorkButton"
+        app:layout_constraintTop_toBottomOf="@+id/goWorkButton" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00E0F7FA"
+        android:drawableLeft="@drawable/arrowup"
+        android:text="找人才"
+        android:textAllCaps="false"
+        android:textColor="#6C78E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/goConsumerButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

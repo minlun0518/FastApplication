@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.rdteacher)
                     .setTitle("登入成功")
-                    .setMessage("歡迎最帥的孟賢老師")
+                    .setMessage("歡迎最帥的孟賢老師~新年快樂")
                     .setPositiveButton("呵呵", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

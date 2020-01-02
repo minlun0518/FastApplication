@@ -6,57 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".WorkActivity">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/questionButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/book"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goWorkButton" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/goWorkButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="160dp"
-        android:adjustViewBounds="false"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:background="#00000000"
-        android:cropToPadding="false"
         android:scaleType="fitCenter"
         android:src="@drawable/get"
-        android:textAlignment="34"
         android:tint="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/gameButton"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="24dp"
         android:background="#02FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/gogogogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/goWorkButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionButton" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/leaveButton"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         android:src="@drawable/quickrun"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gameButton" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -72,5 +67,57 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoText="false"
+        android:background="#00FFFFFF"
+        android:drawableLeft="@drawable/checklist"
+        android:text="接單歷史"
+        app:layout_constraintStart_toStartOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="?android:attr/panelBackground"
+        android:drawableLeft="@drawable/iconfinderset"
+        android:text="設定"
+        app:layout_constraintStart_toEndOf="@+id/questionButton"
+        app:layout_constraintTop_toBottomOf="@+id/goWorkButton" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="說明"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="#00FFFFFF"
+        android:drawableLeft="@drawable/seeker"
+        android:text="瀏覽案件"
+        app:layout_constraintStart_toEndOf="@+id/goWorkButton"
+        app:layout_constraintTop_toTopOf="@+id/goWorkButton" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="#D5FFF0F0"
+        android:text="玩遊戲"
+        app:layout_constraintStart_toEndOf="@+id/gameButton"
+        app:layout_constraintTop_toTopOf="@+id/gameButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
