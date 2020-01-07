@@ -15,6 +15,12 @@ public class WorkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work);
 
+        findViews();
+
+    }
+
+    private void findViews() {
+
         findViewById(R.id.goWorkButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -23,13 +29,14 @@ public class WorkActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.gameButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.gamebutton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent game = new Intent(WorkActivity.this,GameActivity.class);
                 startActivity(game);
             }
         });
+
 
         findViewById(R.id.questionButton).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,4 +63,5 @@ public class WorkActivity extends AppCompatActivity {
             }
         });
     }
+
 }

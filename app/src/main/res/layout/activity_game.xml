@@ -12,12 +12,13 @@
         android:layout_height="54dp"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="52dp"
         android:background="#00FFFFFF"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/button_down"
         app:layout_constraintEnd_toStartOf="@+id/button_right"
         app:layout_constraintStart_toEndOf="@+id/button_left"
+        app:layout_constraintTop_toBottomOf="@+id/game"
         app:srcCompat="@drawable/up" />
 
     <ImageButton
@@ -60,11 +61,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/left" />
 
-    <View
+    <view
         android:id="@+id/game"
-        android:layout_width="wrap_content"
-        android:layout_height="600dp"
+        class="com.tom.fastapplication.GameView"
+        android:layout_width="408dp"
+        android:layout_height="555dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
