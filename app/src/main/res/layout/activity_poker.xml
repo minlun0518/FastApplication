@@ -28,8 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:scaleType="fitCenter"
-        app:backgroundTint="#00EEF1EB"
+        android:scaleType="center"
+        app:backgroundTint="#03DDE6E7"
         app:rippleColor="#00FFFFFF"
         app:srcCompat="@drawable/cap" />
 

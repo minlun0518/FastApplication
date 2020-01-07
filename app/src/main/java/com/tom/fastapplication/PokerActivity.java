@@ -31,6 +31,7 @@ public class PokerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 card.setValue(random.nextInt(52));
+                //fab.setBackgroundDrawable(R.drawable.bad);
             }
         });
     }
