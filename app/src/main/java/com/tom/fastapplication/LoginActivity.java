@@ -4,12 +4,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
-
+    private static final String TAG = LoginActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,12 @@ public class LoginActivity extends AppCompatActivity {
 
         if("rd7791".equals(username)&&"12345678".equals(password)){
             setResult(RESULT_OK);
+            SharedPreferences pref = getSharedPreferences("login", MODE_PRIVATE);
+            pref.edit()
+                    .putString("loginEdUsername",username)
+                    .apply();
+            Log.d(TAG,"loginEdUsername"+edUsername);
+
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.rdteacher)
                     .setTitle("登入成功")

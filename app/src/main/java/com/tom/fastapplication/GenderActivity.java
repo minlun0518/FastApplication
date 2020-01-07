@@ -1,0 +1,51 @@
+package com.tom.fastapplication;
+
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class GenderActivity extends AppCompatActivity {
+    private static final String TAG = GenderActivity.class.getSimpleName();
+    private EditText edGender;
+    private String useGender;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_gender);
+
+        ImageView doneGo=findViewById(R.id.doneGo);
+        doneGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edGender = findViewById(R.id.genderEd);
+                useGender = edGender.getText().toString();
+                if (!TextUtils.isEmpty(edGender.getText().toString())) {
+                    setResult(RESULT_OK);
+                    Log.d(TAG,"setResult");
+                    check();
+                }
+                else {
+                    Toast.makeText(GenderActivity.this, "請輸性別", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
+    private void check(){
+            SharedPreferences pref = getSharedPreferences("GENDER", MODE_PRIVATE);
+            pref.edit()
+                    .putString("edGender", useGender)
+                    .apply();
+            Log.d(TAG,"pref.edit().putString:");
+            finish();
+            Log.d(TAG,"GENDER finish");
+    }
+}
