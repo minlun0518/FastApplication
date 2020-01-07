@@ -16,6 +16,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         findView();
     }
 
+    //針對四個都.setOnClickListener 以後好處理
+    //直接this alt+enter
     public void findView() {
         findViewById(R.id.button_left).setOnClickListener(this);
         findViewById(R.id.button_right).setOnClickListener(this);
